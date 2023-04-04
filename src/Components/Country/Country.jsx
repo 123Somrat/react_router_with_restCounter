@@ -6,8 +6,11 @@ export default function Country() {
   
   return (
     <div>
-      
-
+         <ul>
+           {
+            countries.map(country => <li>{country.name.common}</li>)
+           }
+         </ul>
     </div>
   )
 }
