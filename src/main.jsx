@@ -7,13 +7,21 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './Components/Home/Home';
+import Country from './Components/Country/Country';
 // create route
 const router = createBrowserRouter([
  
   {
      path:'/',
-     element:<Home></Home>
-  }
+     element:<Home></Home>,
+     children:[
+         {
+          path:'/country',
+          element:<Country></Country>
+         }
+     ]
+  },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
